@@ -4,7 +4,7 @@
   "description": "Lesson 2 of SASS - FS0522",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass:watch": "sass assets/scss/styles.scss assets/css/styles.css -w"
   },
   "dependencies": {
     "bootstrap": "^5.2.2"

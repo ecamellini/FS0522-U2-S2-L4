@@ -1,23 +1,47 @@
 // 1) Definisco le variabili di Bootstrap che voglio sovrascrivere.
-@import "./_variables.scss";
+@import "./variables";
 
 // 2) Importo il sorgente di Bootstrap -- le mie variabili andranno a sovrascrivere
 // quelle che si chiamano allo stesso modo
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // _________________________________
-
 // Qua scrivo il mio SCSS, solitamente diviso in più file (per avere ordine nel progetto)
-@import "./_titles.scss";
+@import "./titles"; // Funziona anche se includo senza tratto basso e senza .scss
 @import "./mixin";
 // ...
 
 .box {
-  @include square(100px)
+  @include square(100px);
+  background-color: lighten($secondary, 30%);
+
+  @include tablet {
+    @include square(200px)
+  }
+
+  @include large {
+    @include square(250px)
+  }
+
+  @include xlarge {
+    @include square(300px)
+  }
 }
 
 .box-grow {
-  @include rectangle(100%, 100px)
+  @include rectangle(100%, 100px);
+
+  @include tablet {
+    @include rectangle(100%, 150px);
+  }
+
+  @include large {
+    @include rectangle(100%, 200px);
+  }
+
+  @include xlarge {
+    @include rectangle(100%, 250px);
+  }
 }
 
 .img-box-lg {

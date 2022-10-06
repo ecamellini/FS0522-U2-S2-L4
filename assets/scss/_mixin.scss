@@ -1,0 +1,10 @@
+// Dichiaro un mixin
+@mixin square($size) {
+  width: $size; // Uso il parametro size
+  height: $size;
+}
+
+@mixin rectangle($x, $y) {
+  width: $x;
+  height: $y;
+}
